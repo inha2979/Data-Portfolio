@@ -27,7 +27,7 @@ tabs.forEach((t,i)=>{t.addEventListener('click',()=>go(i,false));
 if(pv){pv.addEventListener('click',()=>go(cur-1,true));nx.addEventListener('click',()=>go(cur+1,true))}
 function fromHash(scroll){const k=slugs.indexOf(location.hash.slice(1));if(k>=0)show(k,scroll);return k>=0}
 addEventListener('hashchange',()=>fromHash(true));
-if(tabs.length){show(0,false);if(fromHash(false))setTimeout(()=>fromHash(true),60)}
+if(tabs.length){show(Math.max(0,slugs.indexOf(document.querySelector('.tabs').dataset.def)),false);if(fromHash(false))setTimeout(()=>fromHash(true),60)}
 const els=[...document.querySelectorAll('[data-en]')];els.forEach(el=>el.dataset.ko=el.innerHTML);
 const btn=document.getElementById('lang');
 function set(l){document.documentElement.lang=l;els.forEach(el=>el.innerHTML=l==='en'?el.dataset.en:el.dataset.ko);if(tabs.length)show(cur,false);btn.textContent=l==='en'?'한국어':'EN';try{localStorage.setItem('data-lang',l)}catch(e){}}

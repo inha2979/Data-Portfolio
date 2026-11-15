@@ -228,3 +228,8 @@ body,h1,h2,h3,.mark span{font-family:'Pretendard Variable',Pretendard,'IBM Plex 
 #cases{scroll-margin-top:70px}
 @media(max-width:620px){.pn button.n{grid-column:1;text-align:left}.tabs{margin-left:-20px;margin-right:-20px;padding-left:20px;padding-right:20px}}
 @media(prefers-reduced-motion:reduce){.js .tpanel:not([hidden]){animation:none}}
+/* ---- v7 ---- */
+.row.how h4{color:var(--dim)}.row.how p{font-size:13.5px;color:var(--muted)}
+.row.how{background:var(--soft);border-radius:10px;border-top:0;padding:14px 14px;margin-top:6px}
+.case.compact .row{padding:12px 0}.case.compact .row p{font-size:14px}
+.case.compact .case-visual{position:static}
